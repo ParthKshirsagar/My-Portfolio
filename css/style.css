@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+canvas{
+    display: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar style */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: crimson;
+}
+
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+
+/* munu button style */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section style */
+.home{
+    display: flex;
+    background: url("../images/banner.jpg") no-repeat center;
+    height: 657px;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+.cursor{
+    display: inline-block;
+    width: 3px;
+    background: crimson;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+.cursor.typing{
+    animation: none;
+}
+@keyframes blink {
+    0% { background: crimson }
+    49% { background: crimson }
+    50% { background: transparent }
+    99% { background: transparent }
+    100% { background: crimson }
+}
+
+/* about section style */
+section{
+    padding: 100px 0;
+}
+.about, .skills, .projects, .school, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+
+section .title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    content: "who i am";
+    position: absolute;
+    bottom: -13px;
+    font-size: 20px;
+    color: crimson;
+    left: 50%;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+
+/* skills section style */
+
+.skills{
+    background: #111;
+    height: 620px;
+}
+.skills .title{
+    color: #fff;
+}
+
+.skills .title::after{
+    content: "what i know";
+    background: #111;
+}
+.skills .title::before{
+    background: #fff;
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .right .bars{
+    position: relative;
+    left: 110%;
+    top: -200px;
+}
+
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: crimson;
+}
+.skills .skills-content .left p{
+    color: #fff;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+    color: #fff;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 600;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.skills .skills-content .right .line.html::before{
+    width: 50%;
+}
+.skills .skills-content .right .line.css::before{
+    width: 40%;
+}
+.skills .skills-content .right .line.js::before{
+    width: 60%;
+}
+
+/* projects section style */
+
+.projects .title::after{
+    content: "what i made";
+}
+
+.projects .projects-content .card{
+    background: #222;
+    padding: 25px 35px;
+    color: #fff;
+}
+
+.projects .projects-content .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+}
+
+.projects .projects-content .box #PocketIndia{
+    width: 150px;
+}
+.projects .projects-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.projects .projects-content .box .project-name{
+    font-size: 25px;
+    font-weight: 700;
+}
+.projects .projects-content .box p{
+    font-size: 15px;
+}
+.projects .projects-content #PocketIndia{
+    border-top-left-radius: 6px;
+}
+.projects .projects-content #origami{
+    border-top-right-radius: 6px;
+}
+.projects .projects-content .github-link{
+    background: #222;
+    width: 88.15%;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    color: #fff;
+    top: 2527px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.projects .projects-content .github-link a{
+    text-decoration: none;
+    color: crimson;
+    position: relative;
+    left: 5px;
+}
+.projects .projects-content .github-link span{
+    position: relative;
+    left: 5px;
+}
+
+/* school section style */
+
+.school .title::after{
+    content: "where i study";
+    background: #111;
+}
+.school .title::before{
+    background: #fff;
+}
+.school .school-content .left{
+    width: 45%;
+}
+.school .school-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.school .school-content .right{
+    width: 55%;
+}
+.school .school-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: crimson;
+}
+.school .school-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.school .school-content .right p{
+    text-align: justify;
+}
+.school{
+    color: #fff;
+    background: #111;
+    height: 650px;
+}
+
+/* contact style */
+.contact .title::after{
+    content: "get in touch";
+}
+
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-heading{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .textarea textarea,
+.contact .right form .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+
+/* footer style */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/* scroll up button style */
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* typing animation */
